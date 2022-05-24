@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<div class="container-xl d-flex flex-column  align-items-center mt-5">
+    <ul>
+        <li>
+            {{todos.title}}
+        </li>
+        <li>
+            {{todos.description}}
+        </li>
+    </ul>
+    <div>
+    <a class="btn btn-outline-warning" href="{% url 'update' todos.id %}">update</a>
+   
+    <a class="btn btn-primary" href="{% url 'delete' todos.id %}">delete</a>
+</div></div>
+{% endblock content %}
+    
